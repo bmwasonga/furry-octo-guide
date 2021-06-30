@@ -45,3 +45,9 @@ We provide the required social icons. But, if you prefer, you can use a font ico
 - [Font Awesome](https://fontawesome.com)
 - [IcoMoon](https://icomoon.io)
 - [Ionicons](https://ionicons.com)
+
+About Services Projects Contact We are creatives Transform your brand Learn more
+
+Photography Client testimonials Emily R. Marketing Director Thomas S. Chief Operating Officer
+Jennie F. Business Owner About Services
+Projects Contact
