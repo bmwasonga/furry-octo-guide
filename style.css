@@ -94,8 +94,11 @@ body {
 }
 
 .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  padding: 3.375rem 0;
+  padding: 3.375rem 4rem;
   width: 100%;
 }
 
@@ -138,7 +141,7 @@ body {
 
 .child {
   position: absolute;
-  bottom: 4rem;
+  bottom: 6rem;
   text-align: center;
   padding: 0.85rem;
 }
@@ -160,7 +163,7 @@ body {
 
 .orange p {
   font-family: 'Barlow', serif;
-  text-align: center;
+  padding-left: 24px;
 }
 /* add on hover underline */
 
@@ -168,6 +171,7 @@ body {
 .testimonial-container {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 0 5rem;
 }
 
 .client h3 {
@@ -279,12 +283,17 @@ footer h3 {
   }
 
   .egg,
-  .glass,
   .berry,
   .orange,
   .clients {
     display: flex;
     flex-direction: column;
+    width: 100vw;
+  }
+
+  .glass {
+    display: flex;
+    flex-direction: column-reverse;
     width: 100vw;
   }
 
@@ -318,16 +327,12 @@ footer h3 {
     height: 100%;
   }
 
-  .parent {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
+  .testimonial-container {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    padding: 0 5rem;
   }
-
-  .child {
-    position: absolute;
-    bottom: 2rem;
-    text-align: center;
-    padding: 0.85rem;
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
