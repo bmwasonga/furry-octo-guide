@@ -26,6 +26,7 @@ li {
 
 a {
   text-decoration: none;
+  font-family: 'Barlow', serif;
 }
 
 .navbar {
@@ -77,6 +78,7 @@ a {
   color: var(--very-dark-desaturated-blue);
   background-color: white;
   border-radius: 25px 25px;
+  font-family: 'Fraunces', serif;
 }
 
 .nav-logo {
@@ -260,8 +262,12 @@ a {
 /* footer */
 
 footer {
-  background-color: var(--dark-moderated-cyan);
+  background-color: hsl(169, 35%, 50%);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 footer h3 {
@@ -277,16 +283,15 @@ footer h3 {
 .links a {
   text-decoration: none;
   color: var(--dark-desaturated-cyan);
+  margin: 24px 0;
 }
 
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {
-    display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
+.socials {
+  width: 50%;
+}
+
+.socials img {
+  padding: 12px;
 }
 
 @media screen and (max-width: 600px) {
