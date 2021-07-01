@@ -12,10 +12,9 @@
   --grayish-blue: hsl(210, 4%, 67%);
   --white: hsl(0, 0%, 100%);
 }
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 body {
   margin: 0;
@@ -28,6 +27,7 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
+  height: 50px;
 }
 
 .topnav a {
@@ -35,22 +35,24 @@ body {
   display: block;
   color: var(--white);
   text-align: center;
-  padding: 24px 18px;
+  padding: 8px 12px;
   text-decoration: none;
   font-size: 17px;
   font-family: 'Barlow', sans-serif;
   font-weight: bold;
+  border: 1px solid black;
+  height: inherit;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #fff;
   color: black;
-  border-radius: 60%;
+  border-radius: 25px 25px;
 }
 
 .topnav a.active {
   background-color: transparent;
-  color: white;
+  color: black;
 }
 
 .topnav .icon {
@@ -58,6 +60,21 @@ body {
 }
 
 /* the styling of the first obj */
+
+.egg,
+.glass {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  overflow-y: hidden;
+}
+
+.egg-img img,
+.glass-img img {
+  width: 100%;
+}
+
+/*  */
 .img-header {
   display: flex;
   flex-direction: column;
@@ -74,6 +91,154 @@ body {
   height: 100px;
   width: 40px;
   color: var(--white);
+}
+
+.description {
+  text-align: center;
+  padding: 3.375rem 0;
+  width: 100%;
+}
+
+.description h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  overflow-wrap: normal;
+  padding: 0 15px;
+  color: var(--very-dark-desaturated-blue);
+}
+
+.description p {
+  color: var(--very-dark-grayish-blue);
+  font-family: 'Barlow', sans-serif;
+
+  line-height: 1.5;
+  padding: 0 1.5rem;
+}
+
+.description h4 {
+  color: var(--very-dark-saturated-blue);
+  text-transform: uppercase;
+  font-family: 'Fraunces', serif;
+}
+
+.berry-orange {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.berry-img img,
+.orange-img img {
+  height: 100%;
+  width: 100%;
+}
+
+.parent {
+  position: relative;
+}
+
+.child {
+  position: absolute;
+  bottom: 4rem;
+  text-align: center;
+  padding: 0.85rem;
+}
+
+.berry h2 {
+  font-family: 'Fraunces', serif;
+  color: var(--dark-desaturated-cyan);
+}
+
+.berry p {
+  font-family: 'Barlow', serif;
+
+  color: var(--dark-desaturated-cyan);
+}
+
+.orange h2 {
+  font-family: 'Fraunces', serif;
+}
+
+.orange p {
+  font-family: 'Barlow', serif;
+  text-align: center;
+}
+/* add on hover underline */
+
+/* testimonials */
+.testimonial-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.client h3 {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1.5em 0;
+  color: var(--grayish-blue);
+  font-family: 'Fraunces', serif;
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3.75rem;
+}
+
+.testimonials img {
+  border-radius: 50%;
+  max-height: 80px;
+}
+
+.testimonials p {
+  font-family: 'Barlow', serif;
+  color: var(--very-dark-grayish-blue);
+
+  line-height: 1.5;
+}
+.testimonials h4 {
+  font-family: 'Fraunces', serif;
+  color: var(--very-dark-desaturated-blue);
+
+  font-weight: bold;
+}
+
+.testimonials span {
+  font-family: 'Barlow', serif;
+  color: var(--grayish-blue);
+}
+
+/* the gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.gallery img {
+  width: 100%;
+}
+/* footer */
+
+footer {
+  background-color: var(--dark-moderated-cyan);
+  text-align: center;
+}
+
+footer h3 {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  color: var(--dark-desaturated-cyan);
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+}
+.links a {
+  text-decoration: none;
+  color: var(--dark-desaturated-cyan);
 }
 
 @media screen and (max-width: 600px) {
@@ -121,5 +286,48 @@ body {
     display: flex;
     flex-direction: column;
     width: 100vw;
+  }
+
+  .gallery {
+    flex-direction: row;
+    width: 100vw;
+    flex-wrap: wrap;
+  }
+
+  .gallery picture {
+    width: 50vw;
+    background-size: 100%;
+  }
+
+  footer h3 {
+    padding: 1.8em 0;
+  }
+
+  .egg-img img,
+  .glass-img img {
+    width: 100vw;
+  }
+
+  .description {
+    width: 100%;
+  }
+
+  .berry-orange {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    width: 100vw;
+    height: 100%;
+  }
+
+  .parent {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .child {
+    position: absolute;
+    bottom: 2rem;
+    text-align: center;
+    padding: 0.85rem;
   }
 }
