@@ -86,6 +86,13 @@ a {
   font-family: 'Fraunces', serif;
 }
 
+.head-desc {
+  background-color: transparent;
+  position: absolute;
+  top: 20vw;
+  left: 75vh;
+  text-align: center;
+}
 /* the styling of the first obj */
 
 .egg,
